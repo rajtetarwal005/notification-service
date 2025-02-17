@@ -19,6 +19,9 @@ public class NotificationService {
         return notificationRepository.save(notification);
     }
 
+    public List<NotificationModel> getAllNotifications() {
+        return notificationRepository.findAll();
+    }
     public List<NotificationModel> getUserNotifications(Long userId) {
         return notificationRepository.findByUserId(userId);
     }

@@ -15,6 +15,10 @@ public class NotificationController {
         this.notificationService = notificationService;
     }
 
+    @GetMapping
+    public List<NotificationModel> getAllNotifications() {
+        return notificationService.getAllNotifications();
+    }
     @PostMapping("/create")
     public NotificationModel createNotification(@RequestBody NotificationModel notification) {
         return notificationService.createNotification(notification);
